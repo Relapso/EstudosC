@@ -1,0 +1,31 @@
+//
+//  main.c
+//  ex2
+//
+//  Created by Vinicius Fernandes on 13/10/22.
+//
+
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+
+int main(int argc, const char * argv[]) {
+    char frase[30];
+    int tam,cont,qtd;
+    
+    cont=0;
+    
+    gets(frase);
+    
+    tam = strlen(frase);
+    
+    for(qtd=0; qtd<tam; qtd++){
+        frase[qtd] = toupper(frase[qtd]);
+        if(frase[qtd] == 'A' || frase[qtd] == 'E' || frase[qtd] == 'I' || frase[qtd] == 'O' || frase[qtd] == 'U'){
+            cont++;
+        }
+        
+    }
+    printf("%d\n",cont);
+    return 0;
+}

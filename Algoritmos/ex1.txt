@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+int main(int argc, const char * argv[]) {
+    char frase[50], auxMai[50], auxMin[50];
+    int tamanho, qtd;
+    
+    gets(frase);
+    
+    tamanho = strlen(frase); //descobre a quantidade de caracteres
+    
+    for (qtd = 0; qtd <=tamanho; qtd++) {
+        auxMai[qtd] = toupper(frase[qtd]);
+        auxMin[qtd] = tolower(frase[qtd]);
+    }
+    printf("Maiscula: %s\n", auxMai);
+    printf("minuscula: %s\n", auxMin);
+    printf("normal: %s\n", frase);
+    return 0;
+}
